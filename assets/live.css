@@ -1,0 +1,103 @@
+.live-mode {
+  --live-ink:#f7edf8;
+  --muted:#c0acc6;
+  --panel:#241a34;
+  --line:#4c395f;
+  --cat:#b9efc3;
+  --enemy:#f8a6bd;
+  background:#100d19;
+}
+.live-mode body {
+  display:grid;
+  place-items:center;
+  background:radial-gradient(ellipse at top,#352044 0%,#100d19 65%);
+  color:var(--live-ink);
+  font-family:"Segoe UI",sans-serif;
+}
+#live[hidden], #live [hidden] {display:none!important}
+.live-mode #game, .live-mode #rot {display:none!important}
+#live {
+  color:var(--live-ink);
+  width:min(100vw,56.25dvh);
+  aspect-ratio:9/16;
+  overflow:hidden;
+  box-sizing:border-box;
+  container-type:inline-size;
+  background:linear-gradient(165deg,#271a37,#151020 73%);
+}
+.live-arena, .live-guide {margin-inline:3cqw}
+#live :is(h2,h3,p,ul) {margin:0}
+#live :is(h2,h3) {text-shadow:none;letter-spacing:normal;line-height:1.12}
+.live-arena {margin-top:1.2cqw;border:.38cqw solid #675078;background:#201629;box-shadow:0 1.1cqw #0f0b17}
+.arena-meta {display:flex;justify-content:space-between;align-items:center;padding:1.25cqw 2.6cqw 0;gap:2cqw}
+#live-map {font-size:4.9cqw;line-height:1.15;color:#ffe5a1}
+.live-score {padding:1.55cqw 2.6cqw;display:grid;grid-template-columns:1fr 18cqw 1fr;align-items:center;gap:2cqw}
+.live-team {min-width:0;font-variant-numeric:tabular-nums}
+.cats {--team:var(--cat);--team-bg:#243139}
+.enemies {--team:var(--enemy);--team-bg:#382535}
+.live-team > div:first-child {display:flex;justify-content:space-between;align-items:baseline;gap:1cqw;color:var(--team)}
+.live-team strong {font-size:3.45cqw}
+.live-team span {font-size:2.65cqw;white-space:nowrap}
+.hp {height:1.1cqw;background:#41334a;margin-top:.8cqw}
+.hp i {display:block;height:100%;width:100%;background:var(--team);transform-origin:left}
+.enemies .hp i {transform-origin:right}
+.live-wins {display:grid;text-align:center;line-height:1.05;gap:.45cqw}
+.live-wins strong {font-size:3.55cqw;white-space:nowrap}
+.live-wins span {font-size:2.45cqw;color:var(--muted)}
+#live-field {position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#151020}
+#live-field #cv {position:static;display:block;width:100%;height:auto}
+#live-field #flash {pointer-events:none}
+#live-result {font-size:3.15cqw;font-weight:800;color:#ffe5a1;text-align:right}
+.live-updates {position:absolute;z-index:1;inset:auto 1cqw .7cqw;display:grid;gap:.25cqw;justify-items:start;pointer-events:none;font-size:2.55cqw;color:#f7edf8}
+.live-updates p {max-width:100%;box-sizing:border-box;padding:.1cqw .55cqw;background:#21172bd9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.live-updates p:empty {display:none}
+#live .live-rosters h3 {display:grid;gap:.45cqw;font-size:3.3cqw;padding:.7cqw 1.5cqw}
+.live-team-commands {display:flex;align-items:baseline;gap:.9cqw;font-size:2.7cqw;white-space:nowrap}
+.live-team-commands code {font:800 4.6cqw/1 "Segoe UI",sans-serif;letter-spacing:-.025em}
+.live-support {display:flex;align-items:center;justify-content:space-between;gap:1cqw;margin-bottom:.5cqw}
+.live-choose-title {font-size:3.45cqw;font-weight:800;color:#ffe5a1;white-space:nowrap}
+#live-team-notice {display:flex;align-items:baseline;gap:.45cqw;min-width:0;font-size:2.8cqw;font-weight:700;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--team,var(--live-ink))}
+#live-team-viewer {min-width:0;overflow:hidden;text-overflow:ellipsis}
+#live-team-selection {flex:none}
+.live-team .live-boost {font-size:2.4cqw;font-weight:700;color:var(--team)}
+.live-boost:empty {display:none}
+.live-guide {padding-top:1.15cqw}
+.live-guide > header {display:flex;justify-content:space-between;align-items:baseline;gap:2cqw;padding-bottom:.65cqw}
+.live-guide h2 {font-size:4.2cqw}
+#live-catalog {color:var(--muted);font-size:2.65cqw;text-align:right;max-width:49cqw}
+.live-rosters {display:grid;grid-template-columns:1fr 1fr;gap:1.7cqw}
+.live-rosters section {border:.3cqw solid var(--line);background:var(--panel);min-width:0}
+.live-guide h3 {font-size:3.5cqw;padding:1cqw 1.7cqw;color:var(--team,#ffe5a1);background:var(--team-bg,#38283e)}
+.live-guide ul {list-style:none;padding:0}
+.live-rosters li {box-sizing:border-box;height:7.05cqw;display:flex;align-items:center;gap:.9cqw;padding:.2cqw 1cqw;border-top:.2cqw solid var(--line)}
+.live-rosters li canvas {flex:none;width:6.45cqw;height:6.45cqw;image-rendering:pixelated}
+.live-entry {min-width:0;flex:1}
+.live-entry > strong {display:block;font-size:3.65cqw;line-height:1.15;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.live-gift {height:3.8cqw;display:flex;align-items:center;gap:.55cqw;color:#ebccf1;font-size:2.85cqw;line-height:1.05;white-space:nowrap}
+.live-gift span:not(.gift-icon) {overflow:hidden;text-overflow:ellipsis}
+.live-gift .gift-icon {display:grid;place-items:center;flex:none;width:3.5cqw;height:3.5cqw;color:#ffd88c}
+.gift-icon img {width:100%;height:100%;object-fit:contain}
+.live-gift b {flex:none;color:#ffe5a1;font-size:2.8cqw}
+.live-skills ul {display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.live-skills li {display:flex;align-items:center;padding:.45cqw .65cqw}
+.live-skills li + li {border-left:.2cqw solid var(--line)}
+.live-skills .live-entry > strong {font-size:2.95cqw}
+.live-skills, .live-finish {display:grid;align-items:stretch;border:.3cqw solid var(--line);margin-top:.85cqw;background:var(--panel)}
+.live-skills {grid-template-columns:13cqw minmax(0,1fr)}
+.live-finish {grid-template-columns:19cqw minmax(0,1fr)}
+#live .live-finish h3 {display:block;align-self:center}
+#live :is(.live-skills,.live-finish) h3 {display:grid;align-content:center;padding:.6cqw .85cqw;font-size:2.95cqw}
+.live-finish ul {display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.live-finish li {min-width:0;padding:.45cqw 1cqw;border-left:.2cqw solid var(--line);background:var(--team-bg);color:var(--team)}
+.live-finish li > strong {display:block;font-size:3.05cqw;line-height:1.12}
+.live-finish .gift-icon {width:4cqw;height:4cqw}
+.live-finish .live-gift {height:4cqw;gap:.65cqw}
+#live-finisher {position:absolute;z-index:1;inset:1.5cqw 2cqw auto;padding:.85cqw 1.2cqw;border:.2cqw solid var(--team);
+  background:#21172bf2;color:var(--team);text-align:center;font-size:3.3cqw;font-weight:800;text-wrap:balance;overflow-wrap:anywhere}
+
+.live-gift .gift-price {font-size:2.55cqw;color:#eddcb1}
+
+.live-skills .live-gift .gift-icon {width:2.85cqw;height:2.85cqw}
+#live-audio-start[hidden]{display:none!important}
+#live-audio-start{position:fixed;z-index:1000;top:16px;left:50%;transform:translateX(-50%);padding:12px 18px;
+  background:#241a34;color:#ffe5a1;border:2px solid #9374af;border-radius:5px;font:700 16px "Segoe UI",sans-serif;cursor:pointer}

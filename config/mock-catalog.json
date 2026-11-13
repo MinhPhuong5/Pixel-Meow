@@ -1,0 +1,84 @@
+[
+  {
+    "id": "rose",
+    "name": "Rose · Mock",
+    "diamonds": 1
+  },
+  {
+    "id": "box",
+    "name": "Hộp · Mock"
+  },
+  {
+    "id": "fish",
+    "name": "Cá · Mock"
+  },
+  {
+    "id": "moon",
+    "name": "Trăng · Mock"
+  },
+  {
+    "id": "gear",
+    "name": "Bánh răng · Mock"
+  },
+  {
+    "id": "goo",
+    "name": "Giọt slime · Mock",
+    "diamonds": 1
+  },
+  {
+    "id": "shell",
+    "name": "Mai · Mock"
+  },
+  {
+    "id": "feather",
+    "name": "Lông vũ · Mock"
+  },
+  {
+    "id": "acorn",
+    "name": "Quả sồi · Mock"
+  },
+  {
+    "id": "crown",
+    "name": "Vương miện · Mock"
+  },
+  {
+    "id": "cat-cannon",
+    "name": "Tia vàng · Mock",
+    "diamonds": 100
+  },
+  {
+    "id": "enemy-cannon",
+    "name": "Tia tím · Mock"
+  },
+  {
+    "id": "map",
+    "name": "La bàn · Mock",
+    "diamonds": 350
+  },
+  {
+    "id": "cat-heal",
+    "name": "Tim ngọc · Mock"
+  },
+  {
+    "id": "enemy-heal",
+    "name": "Tim tím · Mock"
+  },
+  {
+    "id": "cat-buff",
+    "name": "Sao xanh · Mock"
+  },
+  {
+    "id": "enemy-buff",
+    "name": "Sao đỏ · Mock"
+  },
+  {
+    "id": "finish-cat",
+    "name": "Miện Mèo · Mock",
+    "diamonds": 10000
+  },
+  {
+    "id": "finish-enemy",
+    "name": "Miện Quái · Mock",
+    "diamonds": 10000
+  }
+]

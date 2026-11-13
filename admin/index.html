@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thống kê LIVE · Pixel Meow Legion</title>
+<link rel="stylesheet" href="/static/dashboard.css">
+<script src="/static/dashboard.js" defer></script>
+</head>
+<body>
+<main>
+<header class="top"><div><p class="brand">PIXEL MEOW LEGION</p><h1>Thống kê LIVE</h1></div><div id="connection" role="status">Đang kết nối</div></header>
+<section class="filters" aria-label="Bộ lọc">
+<label>Phạm vi<select id="scope"><option value="current">Phiên hiện tại</option><option value="today">Hôm nay</option><option value="all">Toàn bộ lịch sử</option></select></label>
+<label>Phiên LIVE<select id="session"><option value="">Theo phạm vi</option></select></label>
+<label>Ngày<input type="date" id="date"></label>
+<label>Phe<select id="team"><option value="">Tất cả</option><option value="cat">Mèo</option><option value="enemy">Quái</option><option value="none">Chưa chọn</option></select></label>
+<label class="search">Username<input id="search" type="search" placeholder="Tìm người gửi"></label>
+</section>
+<div class="section-head"><h2>Tổng quan</h2><div class="exports"><a id="export-senders">CSV người gửi</a><a id="export-gifts">CSV lịch sử quà</a><a id="export-sessions">CSV theo phiên</a></div></div>
+<section id="overview" class="metrics" aria-label="Tổng quan"></section>
+<section class="charts">
+<article><h2>Quà theo thời gian</h2><canvas id="quantity-chart" aria-label="Biểu đồ số quà theo thời gian" role="img"></canvas></article>
+<article><h2>Diamonds theo thời gian</h2><canvas id="diamonds-chart" aria-label="Biểu đồ diamonds theo thời gian" role="img"></canvas></article>
+<article><h2>Quà hỗ trợ hai phe</h2><div id="teams-chart"></div></article>
+<article><h2>Top loại quà</h2><div id="gifts-chart"></div></article>
+<article><h2>Kỹ năng đã thực thi</h2><div id="skills-chart"></div></article>
+</section>
+<div class="section-head"><h2>Bảng xếp hạng</h2><label>Chỉ số<select id="ranking"><option value="quantity">Số quà</option><option value="diamonds">Diamonds</option><option value="cat">Hỗ trợ Mèo</option><option value="enemy">Hỗ trợ Quái</option><option value="finish">Kết liễu</option></select></label></div>
+<section id="ranking-list" class="ranking"></section>
+<div class="section-head"><h2>Người gửi quà</h2><label>Sắp xếp<select id="sort"><option value="quantity">Số quà</option><option value="diamonds">Diamonds</option></select></label></div>
+<div class="table"><table><thead><tr><th>STT</th><th>Username</th><th>Tên hiển thị</th><th>Phe</th><th>Tổng quà</th><th>Diamonds</th><th>Lần gửi cuối</th><th></th></tr></thead><tbody id="senders"></tbody></table></div>
+<div class="pager"><button id="sender-prev">Trang trước</button><span id="sender-page"></span><button id="sender-next">Trang sau</button></div>
+<div class="section-head"><h2 id="gifts-heading">Lịch sử quà</h2><button id="clear-viewer" hidden>Xem mọi người gửi</button></div>
+<div class="table"><table class="history"><thead><tr><th>Thời gian</th><th>Người gửi</th><th>Quà / Gift ID</th><th>SL</th><th>Diamond / quà</th><th>Diamonds</th><th>Hỗ trợ</th><th>Hành động</th><th>Trạng thái</th><th>Phiên / Trận</th></tr></thead><tbody id="events"></tbody></table></div>
+<div class="pager"><button id="event-prev">Trang trước</button><span id="event-page"></span><button id="event-next">Trang sau</button></div>
+</main>
+</body>
+</html>
